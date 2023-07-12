@@ -43,6 +43,38 @@
             height: 100%;
         }
 
+        .controle-volume{
+            display: flex;
+            padding: 0% 4% 0% 4%;
+            position: relative;
+        }
+
+        .pontos {
+            display: flex;
+            padding: 5% 5% 5% 0%;
+          }
+          
+          .ponto {
+            width: 10px;
+            height: 10px;
+            background-color: var(--cor-quatro);
+            border-radius: 20%;
+            margin: 2px;
+          }
+
+        .controle-configuracao{
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+
+        .tema-geral{
+            display: flex;
+            justify-content: left;
+            padding: 0% 4%;
+        }
+
         input[type="checkbox"] {
             display: none;
         }   
@@ -65,8 +97,7 @@
             display: block;
         }
 
-        .light,
-        .light header{
+        .light{
             background-color: var(--cor-quatro);
             color: var(--cor-dois);
             .texto-principal{
@@ -80,14 +111,9 @@
                 color: var(--cor-tres);
                 background-color: var(--cor-dois);
             }
-        }
-
-        .tema-geral{
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
+            .ponto{
+                background-color: var(--cor-dois);
+            }
         }
 
         .conteudo-principal{

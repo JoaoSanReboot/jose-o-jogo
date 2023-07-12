@@ -41,3 +41,10 @@ function diminuirVolume() {
     audio.volume -= 0.1;
   }
 }
+
+  function removerPonto() {
+      var pontos = document.getElementsByClassName("ponto");
+      if (pontos.length > 0) {
+        pontos[0].remove();
+      }
+    }
