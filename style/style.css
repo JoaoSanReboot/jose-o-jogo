@@ -52,8 +52,17 @@
             cursor: pointer;
         }
 
-        .bi-moon{
+        .bi-sun{
             display: none;
+        }
+
+        .light .bi-moon{
+            display: none;
+
+        }
+
+        .light .bi-sun{
+            display: block;
         }
 
         .light,
