@@ -14,11 +14,6 @@
             --cor-quatro: #E5E5CB;
         }
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
-
         @font-face {
             font-family: 'Arial Rounded MT Bold';
             src: url('/fonts/Arial-Rounded-mt-Bold.ttf') format('truetype');
@@ -34,36 +29,94 @@
             src: url('/fonts/SourceSansVariable-Roman.ttf');
         }
 
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+ 
         body{
             box-sizing: border-box;
             background-color: var(--cor-um);
             color: var(--cor-quatro);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }   
+
+        .bi{
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+
+        .bi-moon{
+            display: none;
+        }
+
+        .light,
+        .light header{
+            background-color: var(--cor-quatro);
+            color: var(--cor-dois);
+            .texto-principal{
+                color: var(--cor-dois);
+            }
+            .rodape{
+                color: var(--cor-um);
+                background-color: var(--cor-tres);
+            }
+            .botao-jogar{
+                color: var(--cor-tres);
+                background-color: var(--cor-dois);
+            }
+        }
+
+        .tema-geral{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
         }
 
         .conteudo-principal{
-            width: 100%;
             display: flex;
-            padding: 0%;
             align-items: center;
             flex-direction: column;
-
             justify-content: space-between;
-            gap: 82px;    
         }
 
-        .container {
-            position: relative;
-            display: inline-block;
-          }
+        .texto-principal{
+            text-decoration: none;
+            font-family : Arial Rounded MT Bold;
+            font-weight : bold;
+            font-size : 2.95rem;
+            color: var(--cor-quatro);
+            padding: 4% 0% 4% 0%;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            padding: 0% 0% 5% 0%;
+        }
+
+        .imagem-centro{
+            width: 100%;
+        }
+        .apresentacao-botao{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            padding: 0% 0% 10% 0%;
+        }
 
         .botao-jogar{
             display: flex;
             justify-content: center;
-
-            position: absolute;
-            top: 70%;
-            left: 43%;
-            z-index: 1;
 
             text-decoration: none;
             font-family : Source Sans Variable;
@@ -72,9 +125,9 @@
             color: var(--cor-um);
 
             background-color: var(--cor-quatro);
-            border-radius: 30px;
-            padding: 21px 0;
-            width: 15%; 
+            border-radius: 25px;
+            padding: 15px 0;
+            width: 200%; 
 
             animation-name: anima;
             animation-duration: 0.5s;
@@ -89,7 +142,6 @@
         }
 
         .rodape{
-            width: 100%;
             font-family : Bahnschrift;
             font-weight : bold;
             font-size : 20px;
@@ -99,176 +151,4 @@
             color: var(--cor-quatro);
             background-color: var(--cor-dois);
             text-align: center;
-        }
-
-        .bloco-carti{
-            position: absolute;
-            top: 6%;
-            left: 2%;
-            padding: 0px 20px;
-            z-index: 1;
-        }
-
-        .carti{
-            position: absolute;
-            top: 8%;
-            left: 4%;
-            z-index: 1;
-
-            transition: transform 0.3s ease;
-        }
-
-        .carti:hover{
-            transform: scale(1.04);
-        }
-
-        .bloco-joji{
-            position: absolute;
-            top: 39%;
-            left: 15%;
-            padding: 5px 20px;
-            z-index: 1;
-        }
-
-        .joji-um{
-            position: absolute;
-            top: 42%;
-            left: 17%;
-            z-index: 1;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .joji-dois{
-            position: absolute;
-            top: 43%;
-            left: 18%;
-            z-index: 1;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .joji-um:hover{
-            transform: translateY(-10px);
-        }
-        .joji-dois:hover{
-            transform: translateY(-10px);
-        }
-
-        .bloco-kendrick{
-            position: absolute;
-            top: 76%;
-            left: 6%;
-            padding: 5px 20px;
-            z-index: 1;
-        }
-
-        .kendrick-um{
-            position: absolute;
-            top: 74%;
-            left: 7%;
-            padding: 0px 20px;
-            z-index: 1;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .kendrick-dois{
-            position: absolute;
-            top: 72%;
-            left: 8%;
-            padding: 0px 20px;
-            z-index: 1;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .kendrick-um:hover{
-            transform: translateY(10px);
-        }
-        .kendrick-dois:hover{
-            transform: translateY(10px);
-        }
-
-        .bloco-post{
-            position: absolute;
-            top: 7%;
-            right: 15%;
-            z-index: 1;
-        }
-
-        .post-malone{
-            position: absolute;
-            top: 8%;
-            right: 14%;
-            padding: 9px;
-            z-index: 1;
-            transition: transform 0.3s ease;
-        }
-
-        .post-malone:hover{
-            transform: scale(1.09);
-        }
-
-        .bloco-tyler{
-            position: absolute;
-            top: 40%;
-            right: 10%;
-            z-index: 1;
-        }
-
-        .tyler-um{
-            position: absolute;
-            top: 40%;
-            right: 8%;
-            padding: 10px;
-            z-index: 1;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .tyler-dois{
-            position: absolute;
-            top: 40%;
-            right: 7%;
-            padding:5px;
-            z-index: 1;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .tyler-um:hover{
-            transform: translateY(-10px);
-        }
-
-        .tyler-dois:hover{
-            transform: translateY(-10px);
-        }
-
-        .bloco-weekend{
-            position: absolute;
-            top: 74%;
-            right: 17%;
-            padding: 5px 20px;
-            z-index: 1;
-        }
-
-        .weekend-um{
-            position: absolute;
-            top: 73%;
-            right: 18%;
-            padding: 5px 20px;
-            z-index: 1;
-            transition: transform 0.3s ease;
-        }
-
-        .weekend-dois{
-            position: absolute;
-            top: 72%;
-            right: 19%;
-            padding: 5px 20px;
-            z-index: 1;
-            transition: transform 0.3s ease;
-        }
-
-        .weekend-um:hover{
-            transform: scale(1.02);
-        }
-
-        .weekend-dois:hover{
-            transform: scale(1.02);
         }
