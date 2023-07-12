@@ -27,3 +27,17 @@ changeThemeBtn.addEventListener("change", function() {
         localStorage.setItem("light", 1);
     }
 });
+
+var audio = document.getElementById("audio-fundo");
+
+function aumentarVolume() {
+  if (audio.volume < 1) {
+    audio.volume += 0.1;
+  }
+}
+
+function diminuirVolume() {
+  if (audio.volume > 0) {
+    audio.volume -= 0.1;
+  }
+}
