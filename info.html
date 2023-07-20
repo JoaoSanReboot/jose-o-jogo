@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="audioPlayer" autoplay loop>
+        <source src="/audios/Knightmare Music.mp3" type="audio/mpeg">
+        <source src="/audios/Knightmare-Music.ogg" type="audio/ogg">
+    </audio>
+      <script>
+ const audioPlayer = document.getElementById('audioPlayer');
+
+// Recuperar a posição de reprodução salva do localStorage
+const savedCurrentTime = localStorage.getItem('audioCurrentTime');
+
+// Se houver uma posição salva, definir o tempo de reprodução do áudio
+if (savedCurrentTime !== null) {
+    audioPlayer.currentTime = parseFloat(savedCurrentTime);
+}
+
+      </script>
+</body>
+</html>

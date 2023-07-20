@@ -28,23 +28,9 @@ changeThemeBtn.addEventListener("change", function() {
     }
 });
 
-var audio = document.getElementById("audio-fundo");
-
-function aumentarVolume() {
-  if (audio.volume < 1) {
-    audio.volume += 0.1;
-  }
-}
-
-function diminuirVolume() {
-  if (audio.volume > 0) {
-    audio.volume -= 0.1;
-  }
-}
-
-  function removerPonto() {
-      var pontos = document.getElementsByClassName("ponto");
-      if (pontos.length > 0) {
-        pontos[0].remove();
-      }
-    }
+const audioPlayer = document.getElementById('audioPlayer');
+        
+// Salvar a posição de reprodução atual no localStorage a cada 5 segundos
+setInterval(() => {
+    localStorage.setItem('audioCurrentTime', audioPlayer.currentTime);
+}, 1000);

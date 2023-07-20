@@ -21,29 +21,26 @@
                     <i class="bi bi-moon"></i>
                 </label>
             </div>
-            <div class="controle-volume"> 
-                <i class="bi bi-volume-off-fill" onclick="diminuirVolume(), removerPonto()"></i>
-                <div class="pontos">
-                    <div class="ponto"></div>
-                    <div class="ponto"></div>
-                    <div class="ponto"></div>
-                    <div class="ponto"></div>
-                    <div class="ponto"></div>
-                  </div>
-                <i class="bi bi-volume-up" onclick = "aumentarVolume()"></i>
-            </div>
         </header>
             <h1 class="texto-principal"> ADIVINHE A MÚSICA</h1>
         <div class="container">
             <img class="imagem-centro" src="assets/joseimagem.png" alt="Imagem Centro">
         </div>
         <div class="apresentacao-botao">
-            <a class="botao-jogar" href="info.html">JOGAR</a>
+            <a class="botao-jogar" href="info.html">JOGAR</a> 
         </div>
-        <audio id="audio-fundo" autoplay loop>
-            <source src="/audios/Knightmare Music.mp3" type="audio/mpeg">
-            <source src="/audios/Knightmare-Music.ogg" type="audio/ogg">
-        </audio>
+            <audio id="audioPlayer" autoplay loop>
+                <source src="/audios/Knightmare Music.mp3" type="audio/mpeg">
+                <source src="/audios/Knightmare-Music.ogg" type="audio/ogg">
+            </audio>
+              <script>
+                const audioPlayer = document.getElementById('audioPlayer');
+        
+        // Salvar a posição de reprodução atual no localStorage a cada 5 segundos
+        setInterval(() => {
+            localStorage.setItem('audioCurrentTime', audioPlayer.currentTime);
+        }, 10);
+              </script>
     </main>
 
     <footer class="rodape">

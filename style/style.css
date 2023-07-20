@@ -7,6 +7,7 @@
         transform: scale(1.01);
     }
 }
+
         :root{
             --cor-um: #1A120B;
             --cor-dois: #3C2A21;
@@ -42,25 +43,6 @@
             transition: 0.3s;
             height: 100%;
         }
-
-        .controle-volume{
-            display: flex;
-            padding: 0% 4% 0% 4%;
-            position: relative;
-        }
-
-        .pontos {
-            display: flex;
-            padding: 5% 5% 5% 0%;
-          }
-          
-          .ponto {
-            width: 10px;
-            height: 10px;
-            background-color: var(--cor-quatro);
-            border-radius: 20%;
-            margin: 2px;
-          }
 
         .controle-configuracao{
             padding: 1rem;
