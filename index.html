@@ -22,25 +22,25 @@
                 </label>
             </div>
         </header>
-            <h1 class="texto-principal"> ADIVINHE A MÚSICA</h1>
+        <h1 class="texto-principal">ADIVINHE A MÚSICA</h1>
         <div class="container">
             <img class="imagem-centro" src="assets/joseimagem.png" alt="Imagem Centro">
         </div>
         <div class="apresentacao-botao">
             <a class="botao-jogar" href="info.html">JOGAR</a> 
         </div>
-            <audio id="audioPlayer" autoplay loop>
-                <source src="/audios/Knightmare Music.mp3" type="audio/mpeg">
-                <source src="/audios/Knightmare-Music.ogg" type="audio/ogg">
-            </audio>
-              <script>
-                const audioPlayer = document.getElementById('audioPlayer');
-        
-        // Salvar a posição de reprodução atual no localStorage a cada 5 segundos
-        setInterval(() => {
-            localStorage.setItem('audioCurrentTime', audioPlayer.currentTime);
-        }, 10);
-              </script>
+        <audio id="audio-fundo" autoplay loop>
+            <source src="/audios/Knightmare Music.mp3" type="audio/mpeg">
+            <source src="/audios/Knightmare-Music.ogg" type="audio/ogg">
+        </audio>
+        <script>
+            const audioPlayer = document.getElementById('audio-fundo');
+            
+            //Script para salvar o audio a cada tempo determinado. 
+            setInterval(() => {
+                localStorage.setItem('audioCurrentTime', audioPlayer.currentTime);
+            }, 10);
+        </script>
     </main>
 
     <footer class="rodape">

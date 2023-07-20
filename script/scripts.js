@@ -27,10 +27,3 @@ changeThemeBtn.addEventListener("change", function() {
         localStorage.setItem("light", 1);
     }
 });
-
-const audioPlayer = document.getElementById('audioPlayer');
-        
-// Salvar a posição de reprodução atual no localStorage a cada 5 segundos
-setInterval(() => {
-    localStorage.setItem('audioCurrentTime', audioPlayer.currentTime);
-}, 1000);
