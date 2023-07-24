@@ -27,3 +27,4 @@ changeThemeBtn.addEventListener("change", function() {
         localStorage.setItem("light", 1);
     }
 });
+
