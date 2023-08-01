@@ -101,6 +101,22 @@
                 color: var(--cor-tres);
                 box-shadow: 0px 10px 0px 0px solid #1A120B;
             }
+            .login-box{
+                background-color: var(--cor-dois);
+                color: var(--cor-tres);
+                box-shadow: 0px 10px 0px 0px solid #1A120B;
+            }
+            .botao-entrar{     
+                background-color: var(--cor-quatro);
+                color: var(--cor-dois);
+            }
+
+            .label-float label{
+                color: var(--cor-tres);
+            }
+            .registre-se{
+                color: var(--cor-quatro);
+            }
         }
 
         .conteudo-principal{
@@ -125,9 +141,6 @@
             padding: 0% 0% 5% 0%;
         }
 
-        .imagem-centro{
-            width: 100%;
-        }
         .apresentacao-botao{
             display: flex;
             justify-content: space-between;
@@ -304,8 +317,120 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
           }
 
-          
+        .login-text{
+            display: flex;
+            justify-content: center;
+            padding: 6%;
+            font-family: Arial Rounded MT Bold;
+            font-size: 2rem;
+        }
 
+        .login-box{
+            font-family : Bahnschrift;
+            font-weight : bold;
+            font-size: 1.1rem;
+            color: var(--cor-dois);
+
+            background-color: var(--cor-quatro);
+            border-radius: 20px;
+            width: 406px;
+            height: 440px;
+            border-image: url(/assets/revert-jose.png);
+
+        }
+
+        .conteudo-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .label-float input{
+            width: 260px;
+            padding: 5px 5px;
+            display: inline-block;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 3px solid #1A120B;
+            background-color: transparent;
+            outline: none;
+            min-width: 180px;
+            transition: all .3s ease-out;
+        }
+
+        .label-float{
+            position: relative;
+            padding-top: 20px;
+            margin-top: 4%;
+            margin-bottom: 4%;
+        }
+
+        .label-float input:focus{
+            border-bottom: 2px solid var(--cor-tres);
+        }
+
+        .label-float label{
+            color: var(--cor-dois);
+            pointer-events: none;
+            top: 0;
+            left: 0;
+            margin-top: 24px;
+            position: absolute;
+            transition: all .3s ease-out;
+        }
+          
+        .label-float input:focus + label, 
+        .label-float input:valid + label {
+            margin-top: 0;
+            font-size: 0.9rem;
+        }
+
+        .posicao-botao{
+            padding: 5%;
+            display: flex; 
+            justify-content: center;
+        }
+
+        .botao-entrar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            text-decoration: none;
+            font-family: Arial Rounded MT Bold;
+            font-size: 2rem;
+            font-weight : bold;
+            font-size : 1.7rem;
+            color: var(--cor-um);
+            box-shadow: 0px 10px 0px 0px #B2AA84;
+            transition: transform 0.2s, box-shadow 0.2s;
+
+            
+            background-color: var(--cor-dois);
+            color: var(--cor-quatro);
+            border-radius: 28px;
+            width: 240px;
+            height: 55px;
+        }
+
+        .botao-entrar:hover {
+            transform: translateY(2px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          }
+
+        .redirecionamento{
+            display: flex;
+            justify-content: center;
+            padding: 5%;
+            text-decoration: none;
+        }
+
+        .registre-se{
+            text-decoration: none;
+            color: var(--cor-um);
+            padding: 0% 3px;
+        }
         
 
 
